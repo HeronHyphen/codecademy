@@ -1,16 +1,16 @@
 // This program generates a nonsensical inspirational message everytime it is ran
 
 const quoteTemplates = [
-  `A ${n1} without ${n2} is a ${n1} ${ptv}.`,
-  `It's ${adj} to ${v} a person who ${adv} gives up.`,
-  `You can either ${v} the ${n1} of ${n2} or the ${n1} of ${n3}. The choice is yours.`, 
-  `${adj1} things are done by a series of ${adj2} things ${ptv} together.`,
-  `${v1} where you are. ${v2} what you have. ${v3} what you can. If you can't do anything about it then let it go. Don't be a ${n} to things you can't ${v4}.`,
-  `${n1} cannot ${v} ${n1}: only ${n2} can do that. ${n3} cannot ${v} ${n3}: only ${n4} can do that.`,
-  `The ${adv} way to ${v1} your ${n} is to ${v2} it.`,
-  `You can't let your ${n} ${v1} you. You have to ${v2} your ${n} ${v1} you.`,
-  `Never ${v} a day in your life. ${adj1} days bring you happiness and ${adj2} days ${v} you experience.`,
-  `${v1} as if you were to ${v2} tomorrow. ${v3} as if you were to ${v1} forever.`
+  `A without is a.`,
+  `It's to a person who gives up.`,
+  `You can either the of or the of. The choice is yours.`, 
+  `things are done by a series of things together.`,
+  `where you are. what you have. what you can. If you can't do anything about it then let it go. Don't be a to things you can't.`,
+  `cannot: only can do that. cannot: only can do that.`,
+  `The way to your is to it.`,
+  `You can't let your you. You have to your you.`,
+  `Never a day in your life. days bring you happiness and days you experience.`,
+  `as if you were to tomorrow. as if you were to forever.`
 ];
 
 const nouns = ['secret', 'person', 'joy', 'pain', 'path', 'life', 'greatness', 'achievement', 'work', 'love', 'hate', 'light',
@@ -64,7 +64,7 @@ function createInspirationalQuote() {
         let adj1 = getRandomElement(adjectives);
         let adj2 = getRandomElement(adjectives);
         let ptv = getRandomElement(pastTenseVerbs);        
-        return  `${adj1} things are done by a series of ${adj2} things ${ptv} together.`;   
+        return  `${adj1[0].toUpperCase() + adj1.slice(1)} things are done by a series of ${adj2} things ${ptv} together.`;   
 
     } else if (inspirationalQuote === quoteTemplates[4]) {
         let v1 = getRandomElement(verbs);
@@ -72,9 +72,8 @@ function createInspirationalQuote() {
         let v3 = getRandomElement(verbs);       
         let n = getRandomElement(nouns);
         let v4 = getRandomElement(verbs); 
-        return  `${v1} where you are. ${v2} what you have. ${v3} what you can. 
+        return  `${v1[0].toUpperCase() + v1.slice(1)} where you are. ${v2[0].toUpperCase() + v2.slice(1)} what you have. ${v3[0].toUpperCase() + v3.slice(1)} what you can. 
         If you can't do anything about it then let it go. Don't be a ${n} to things you can't ${v4}.`;   
-   
 
     } else if (inspirationalQuote === quoteTemplates[5]) {
         let n1 = getRandomElement(nouns);
@@ -82,7 +81,7 @@ function createInspirationalQuote() {
         let n2 = getRandomElement(nouns);
         let n3 = getRandomElement(nouns);
         let n4 = getRandomElement(nouns);
-        return `${n1} cannot ${v} ${n1}: only ${n2} can do that. ${n3} cannot ${v} ${n3}: only ${n4} can do that.`;    
+        return `${n1[0].toUpperCase() + n1.slice(1)} cannot ${v} ${n1}: only ${n2} can do that. ${n3[0].toUpperCase() + n3.slice(1)} cannot ${v} ${n3}: only ${n4} can do that.`;    
 
     } else if (inspirationalQuote === quoteTemplates[6]) {
         let adv = getRandomElement(adverbs);
@@ -101,12 +100,17 @@ function createInspirationalQuote() {
         let v = getRandomElement(verbs);
         let adj1 = getRandomElement(adjectives);
         let adj2 = getRandomElement(adjectives);
-        return `Never ${v} a day in your life. ${adj1} days bring you happiness and ${adj2} days ${v} you experience.`; 
+        return `Never ${v} a day in your life. ${adj1[0].toUpperCase() + adj1.slice(1)} days bring you happiness and ${adj2} days ${v} you experience.`; 
 
     } else {
         let v1 = getRandomElement(verbs);
         let v2 = getRandomElement(verbs);
         let v3 = getRandomElement(verbs);
-        return `${v1} as if you were to ${v2} tomorrow. ${v3} as if you were to ${v1} forever.`;   
+        return `${v1[0].toUpperCase() + v1.slice(1)} as if you were to ${v2} tomorrow. ${v3[0].toUpperCase() + v3.slice(1)} as if you were to ${v1} forever.`;   
     }
 };
+
+
+console.log(createInspirationalQuote());
+console.log(createInspirationalQuote());
+console.log(createInspirationalQuote());
