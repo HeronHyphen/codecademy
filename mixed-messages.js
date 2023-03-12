@@ -19,19 +19,24 @@ const nouns = ['secret', 'person', 'joy', 'pain', 'path', 'life', 'greatness', '
 
 const verbs = ['find', 'live', 'go', 'begin', 'end', 'create', 'work', 'satisfy', 'recover', 'win', 'lose', 'dream',
 'do', 'fight', 'allow', 'know', 'persevere', 'try', 'fail', 'make', 'miss', 'understand', 'join', 'define', 'be', 'regret', 
-'laugh', 'continue', 'finish', 'resist', 'remember', 'tell', 'say', 'endure', 'experience', 'scare', 'release'];
+'laugh', 'continue', 'finish', 'resist', 'remember', 'tell', 'say', 'endure', 'experience', 'scare', 'release', 'see', 'hear',
+'imagine'];
 
-const adjectives = ['good', 'bad', 'great', 'different', 'new', 'old', 'best', 'worst', 'next', 'first', 'last', 'low',
+const adjectives = ['good', 'bad', 'great', 'different', 'new', 'old', 'best', 'worst', 'low', 'brief', 'placid', 'pleasing',
 'high', 'small', 'big', 'large', 'quiet', 'loud', 'soft', 'hard', 'normal', 'exquiste', 'terrifying', 'jarring', 'awesome',
 'mundane', 'fast', 'quick', 'slow', 'languid', 'nervous', 'confident', 'extraordinary', 'common', 'rare', 'unique', 'smart', 
-'stupid', 'average', 'hot', 'cold', 'warm', 'cool', 'mediocre', 'exciting', 'beautiful', 'uncanny', 'familiar', 'sucessful'];
+'stupid', 'average', 'hot', 'cold', 'warm', 'cool', 'mediocre', 'exciting', 'beautiful', 'uncanny', 'familiar', 'sucessful', 
+'right', 'wrong', 'heavy', 'fragile', 'righteous', 'wicked', 'strenuous', 'intense', 'useful', 'lucky', 'easy', 'difficult'];
 
-const adverbs = ['only', 'sometimes', 'never', 'always', 'sparingly', 'actively', 'passively'];
+const adverbs = ['only', 'sometimes', 'never', 'always', 'sparingly', 'actively', 'passively', 'next', 'first', 'last', 'already', 
+'late', 'constantly', 'early', 'often', 'almost', 'greatly', 'fully', 'just', 'highly', 'most', 'least', 'somewhat', 'simply', 'easily',
+'barely', 'totally', 'suddenly', 'quickly', 'slowly', 'ususally', 'softly', 'shyly', 'boldy', 'painfully', 'happily', 'exactly',
+'gracefully', 'generously', 'rudely', 'frantically', 'eagerly', 'doubtfully', 'peacefullly', 'badly', 'correctly', 'begrudgingly'];
 
 const pastTenseVerbs = ['found', 'lived', 'went', 'began', 'ended', 'created', 'worked', 'satisfied', 'recovered', 'won', 'lost',
 'dreamt', 'did', 'fought', 'allowed', 'knew', 'persevered', 'tried', 'feil', 'maked', 'missed', 'understoond', 'joined',
 'defined', 'was', 'regretted', 'laughed', 'continued', 'finished', 'resisted', 'remembered', 'told', 'said', 'endured',
-'experienced', 'scared', 'released'];
+'experienced', 'scared', 'released', 'saw', 'heard', 'imagined'];
 
 const randomNumber = () => Math.random();
 
@@ -111,6 +116,6 @@ function createInspirationalQuote() {
 };
 
 
-console.log(createInspirationalQuote());
-console.log(createInspirationalQuote());
-console.log(createInspirationalQuote());
+for (let i = 0; i < 11; i++) {
+    console.log(createInspirationalQuote());
+}
