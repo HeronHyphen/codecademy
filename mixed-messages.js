@@ -89,11 +89,11 @@ function createInspirationalQuote() {
         return `${n1[0].toUpperCase() + n1.slice(1)} cannot ${v} ${n1}: only ${n2} can do that. ${n3[0].toUpperCase() + n3.slice(1)} cannot ${v} ${n3}: only ${n4} can do that.`;    
 
     } else if (inspirationalQuote === quoteTemplates[6]) {
-        let adv = getRandomElement(adverbs);
+        let adj = getRandomElement(adjectives);
         let v1 = getRandomElement(verbs);
         let n = getRandomElement(nouns);
         let v2 = getRandomElement(verbs);
-        return `The ${adv} way to ${v1} your ${n} is to ${v2} it.`;   
+        return `The ${adj} way to ${v1} your ${n} is to ${v2} it.`;   
 
     } else if (inspirationalQuote === quoteTemplates[7]) {
         let n = getRandomElement(nouns);
